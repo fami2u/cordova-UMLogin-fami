@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.UMLogin.fami" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>UMLogin</name>
+    <js-module name="UMLogin" src="www/UMLogin.js">
+        <clobbers target="UMLogin" />
+    </js-module>
+    <platform name="ios">
+        <config-file parent="/*" target="config.xml">
+            <feature name="UMLogin">
+                <param name="ios-package" value="UMLogin" />
+            </feature>
+        </config-file>
+        
+        
+        <config-file target="*-Info.plist" parent="LSApplicationQueriesSchemes">
+            <array>
+                <string>iosamap</string>
+                <string>alipay</string>
+                <string>alipayshare</string>
+                <string>wechat</string>
+                <string>weixin</string>
+                <string>sinaweibohd</string>
+                <string>sinaweibo</string>
+                <string>sinaweibosso</string>
+                <string>weibosdk</string>
+                <string>weibosdk2.5</string>
+                <string>mqqapi</string>
+                <string>mqq</string>
+                <string>mqqOpensdkSSoLogin</string>
+                <string>mqqconnect</string>
+                <string>mqqopensdkdataline</string>
+                <string>mqqopensdkgrouptribeshare</string>
+                <string>mqqopensdkfriend</string>
+                <string>mqqopensdkapi</string>
+                <string>mqqopensdkapiV2</string>
+                <string>mqqopensdkapiV3</string>
+                <string>mqzoneopensdk</string>
+                <string>wtloginmqq</string>
+                <string>wtloginmqq2</string>
+                <string>mqqwpa</string>
+                <string>mqzone</string>
+                <string>mqzonev2</string>
+                <string>mqzoneshare</string>
+                <string>wtloginqzone</string>
+                <string>mqzonewx</string>
+                <string>mqzoneopensdkapiV2</string>
+                <string>mqzoneopensdkapi19</string>
+                <string>mqzoneopensdkapi</string>
+                <string>mqqbrowser</string>
+                <string>mttbrowser</string>
+            </array>
+        </config-file>
+        
+            
+        <source-file src="src/ios/UMLogin.m" />
+        
+        <framework src="ImageIO.framework" weak="true" />
+        <framework src="SystemConfiguration.framework" weak="true" />
+        <framework src="Security.framework" weak="true" />
+        <framework src="CoreTelephony.framework" weak="true" />
+        <framework src="CoreGraphics.framework" weak="true" />
+        
+        
+        <framework src="libiconv.tbd" />
+        <framework src="libsqlite3.tbd" />
+        <framework src="libstdc++.tbd" />
+        <framework src="libz.tbd" />
+
+        <resource-file src="src/ios/UMSocial_Sdk_5.2.1/UMSocialSDKResourcesNew.bundle" custom="true" />
+        <source-file src="src/ios/UMSocial_Sdk_5.2.1/libUMSocial_Sdk_5.2.1.a" framework="true" />
+
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocial.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialAccountManager.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialBar.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialConfig.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialControllerService.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialControllerServiceComment.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialData.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialDataService.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialSnsData.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialSnsPlatformManager.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_5.2.1/Header/UMSocialSnsService.h"/>
+
+
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/UMSocialSinaSSOHandler.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WBHttpRequest.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WBHttpRequest+WeiboGame.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WBHttpRequest+WeiboShare.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WBHttpRequest+WeiboToken.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WBHttpRequest+WeiboUser.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WBSDKBasicButton.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WBSDKCommentButton.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WBSDKRelationshipButton.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WeiboSDK.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WeiboSDK+Statistics.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WeiboUser.h"/>
+        <resource-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/WeiboSDK.bundle" custom="true" />
+        <source-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/libSocialSinaSSO.a" framework="true" />
+        <source-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/SinaSSO/libWeiboSDK.a" framework="true" />
+        
+        
+        <resource-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/TencentOpenApi_IOS_Bundle.bundle" custom="true" />
+        <framework src="src/ios/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/TencentOpenAPI.framework" custom="true"/>
+        <source-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/libSocialQQ.a" framework="true" />
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI/UMSocialQQHandler.h"/>
+
+
+
+        <source-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/Wechat/libSocialWechat.a" framework="true" />
+        <source-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/Wechat/libWeChatSDK.a" framework="true" />
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/Wechat/UMSocialWechatHandler.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/Wechat/WechatAuthSDK.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/Wechat/WXApi.h"/>
+        <header-file src="src/ios/UMSocial_Sdk_Extra_Frameworks/Wechat/WXApiObject.h"/>
+
+
+
+
+    </platform>
+</plugin>
